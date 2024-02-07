@@ -22,7 +22,7 @@ const getData = async (slug) => {
 const Page = async ({ params }) => {
   console.log("i am here");
   const { slug } = params;
-
+  console.log(slug);
   const data = await getData(slug);
   console.log(data);
   const formattedDate = moment(data.createdAt).format("Do MMMM, YYYY");
