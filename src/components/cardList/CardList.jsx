@@ -5,7 +5,7 @@ import Card from "../card/Card";
 
 const getData = async (page, cat) => {
   const res = await fetch(
-    `http://thought-canvas.vercel.app/api/post?page=${page}&cat=${cat || ""}`,
+    `http://dev-tau-vert.vercel.app/api/post?page=${page}&cat=${cat || ""}`,
     {
       cache: "no-store",
     }

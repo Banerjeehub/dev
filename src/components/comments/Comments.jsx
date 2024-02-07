@@ -24,7 +24,7 @@ const Comments = ({ postSlug }) => {
   const [desc, setDesc] = useState("");
 
   const { data, mutate, isLoading } = useSWR(
-    `http://thought-canvas.vercel.app/api/comments?postSlug=${postSlug}`,
+    `http://dev-tau-vert.vercel.app/api/comments?postSlug=${postSlug}`,
     fetcher
   );
   function handleDate(data) {
