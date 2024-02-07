@@ -147,7 +147,7 @@ const WritePage = () => {
           value={value}
           onChange={(e) => {
             setValue;
-            e.preventDefault();
+            // e.preventDefault();
           }}
           placeholder="Tell your story..."
         />
