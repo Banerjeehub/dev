@@ -17,7 +17,7 @@ const Card = ({ item, key }) => {
           </span>
           <span className={Styles.category}>{item.catSlug}</span>
         </div>
-        <Link href={`/post/${item.slug}`}>
+        <Link href={`/post/${encodeURIComponent(item.slug)}`}>
           <h1>{item.title}</h1>
         </Link>
         <div
