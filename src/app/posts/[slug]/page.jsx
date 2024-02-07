@@ -19,12 +19,7 @@ const getData = async (slug) => {
   return res.json();
 };
 
-const Page = async ({ params }) => {
-  console.log("i am here");
-  const { slug } = params;
-  console.log(slug);
-  const data = await getData(slug);
-  console.log(data);
+const Page = ({ data }) => {
   const formattedDate = moment(data.createdAt).format("Do MMMM, YYYY");
   return (
     <div className={Styles.container}>
@@ -67,6 +62,21 @@ const Page = async ({ params }) => {
       </div>
     </div>
   );
+};
+
+export const getServerSideProps = async ({ params }) => {
+  const { slug } = params;
+  try {
+    const data = await getData(slug);
+    return {
+      props: { data },
+    };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return {
+      notFound: true,
+    };
+  }
 };
 
 export default Page;
