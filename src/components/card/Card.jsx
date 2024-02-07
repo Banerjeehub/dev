@@ -17,14 +17,14 @@ const Card = ({ item, key }) => {
           </span>
           <span className={Styles.category}>{item.catSlug}</span>
         </div>
-        <Link href={`/post/${item.slug}`}>
+        <Link href={`https://tdev-tau-vert.vercel.app/post/${item.slug}`}>
           <h1>{item.title}</h1>
         </Link>
         <div
           className={Styles.desc}
           dangerouslySetInnerHTML={{ __html: item?.desc.substring(0, 60) }}
         />
-        <Link href={`/post/${item.slug}`} className={Styles.link}>
+        <Link href={`https://tdev-tau-vert.vercel.app/post/${item.slug}`} className={Styles.link}>
           Read More
         </Link>
       </div>
