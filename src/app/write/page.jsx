@@ -4,6 +4,7 @@ import Image from "next/image";
 import Styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import "react-quill/dist/quill.bubble.css";
+import ReactQuill from "react-quill";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import {
@@ -20,7 +21,7 @@ import dynamic from "next/dynamic";
 const WritePage = () => {
   const { status } = useSession();
   const router = useRouter();
-  const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+  //const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
   const [open, setOpen] = useState(false);
   const [file, setFile] = useState(null);
