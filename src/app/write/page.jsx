@@ -108,7 +108,10 @@ const WritePage = () => {
       />
       <select
         className={Styles.select}
-        onChange={(e) => setCatSlug(e.target.value)}
+        onChange={(e) => {
+          setCatSlug(e.target.value);
+          e.preventDefault();
+        }}
       >
         <option value="news">news</option>
         <option value="fashion">fashion</option>
@@ -128,7 +131,6 @@ const WritePage = () => {
               id="image"
               onChange={(e) => {
                 setFile(e.target.files[0]);
-                e.preventDefault();
               }}
               style={{ display: "none" }}
             />
