@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Styles from "./card.module.css";
 import Link from "next/link";
-
+a;
 const Card = ({ item, key }) => {
   const URL = "/post/";
   return (
@@ -18,16 +18,16 @@ const Card = ({ item, key }) => {
           </span>
           <span className={Styles.category}>{item.catSlug}</span>
         </div>
-        <Link href={`${URL}${item.slug}`}>
+        <a href={`${URL}${item.slug}`}>
           <h1>{item.title}</h1>
-        </Link>
+        </a>
         <div
           className={Styles.desc}
           dangerouslySetInnerHTML={{ __html: item?.desc.substring(0, 60) }}
         />
-        <Link href={`${URL}${item.slug}`} className={Styles.link}>
+        <a href={`${URL}${item.slug}`} className={Styles.link}>
           Read More
-        </Link>
+        </a>
       </div>
     </div>
   );
