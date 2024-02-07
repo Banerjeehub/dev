@@ -27,46 +27,45 @@ const SinglePage = async ({ params }) => {
   console.log(data);
   const formattedDate = moment(data.createdAt).format("Do MMMM, YYYY");
   return (
-    <p>Hello</p>
-    // <div className={Styles.container}>
-    //   <div className={Styles.infoContainer}>
-    //     <div className={Styles.textContainer}>
-    //       <h1 className={Styles.title}>{data.title}</h1>
-    //       <div className={Styles.user}>
-    //         <div className={Styles.userImageContainer}>
-    //           <Image
-    //             src={data?.user?.image}
-    //             alt=""
-    //             fill
-    //             className={Styles.avatar}
-    //           />
-    //         </div>
-    //         <div className={Styles.userTextContainer}>
-    //           <span className={Styles.userName}>{data.user.name}</span>
-    //           <span className={Styles.date}>{formattedDate}</span>
-    //         </div>
-    //       </div>
-    //     </div>
-    //     {data?.img && (
-    //       <div className={Styles.imageContainer}>
-    //         <Image src={data?.img} alt="" fill className={Styles.image} />
-    //       </div>
-    //     )}
-    //   </div>
-    //   <div className={Styles.content}>
-    //     <div className={Styles.post}>
-    //       <div
-    //         className={Styles.description}
-    //         dangerouslySetInnerHTML={{ __html: data?.desc }}
-    //       />
-    //       <div className="comment">
-    //         <Comments postSlug={slug} />
-    //       </div>
-    //     </div>
+    <div className={Styles.container}>
+      <div className={Styles.infoContainer}>
+        <div className={Styles.textContainer}>
+          <h1 className={Styles.title}>{data.title}</h1>
+          <div className={Styles.user}>
+            <div className={Styles.userImageContainer}>
+              <Image
+                src={data?.user?.image}
+                alt=""
+                fill
+                className={Styles.avatar}
+              />
+            </div>
+            <div className={Styles.userTextContainer}>
+              <span className={Styles.userName}>{data.user.name}</span>
+              <span className={Styles.date}>{formattedDate}</span>
+            </div>
+          </div>
+        </div>
+        {data?.img && (
+          <div className={Styles.imageContainer}>
+            <Image src={data?.img} alt="" fill className={Styles.image} />
+          </div>
+        )}
+      </div>
+      <div className={Styles.content}>
+        <div className={Styles.post}>
+          <div
+            className={Styles.description}
+            dangerouslySetInnerHTML={{ __html: data?.desc }}
+          />
+          <div className="comment">
+            <Comments postSlug={slug} />
+          </div>
+        </div>
 
-    //     <Menu />
-    //   </div>
-    // </div>
+        <Menu />
+      </div>
+    </div>
   );
 };
 
