@@ -126,7 +126,10 @@ const WritePage = () => {
             <input
               type="file"
               id="image"
-              onChange={(e) => setFile(e.target.files[0])}
+              onChange={(e) => {
+                setFile(e.target.files[0]);
+                e.preventDefault();
+              }}
               style={{ display: "none" }}
             />
             <button className={Styles.addButton}>
@@ -148,7 +151,7 @@ const WritePage = () => {
           value={value}
           onChange={(e) => {
             setValue;
-            // e.preventDefault();
+            e.preventDefault();
           }}
           placeholder="Tell your story..."
         />
