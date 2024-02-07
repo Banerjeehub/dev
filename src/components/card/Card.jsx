@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Styles from "./card.module.css";
 import Link from "next/link";
-a;
+
 const Card = ({ item, key }) => {
   const URL = "/post/";
   return (
