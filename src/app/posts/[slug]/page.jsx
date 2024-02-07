@@ -4,8 +4,9 @@ import Image from "next/image";
 import Comments from "@/components/comments/Comments";
 import moment from "moment";
 
-const getData = async ({slug}) => {
+const getData = async (slug) => {
   const res = await fetch(`https://dev-tau-vert.vercel.app/api/posts/${slug}`);
+  console.log("hello");
   if (!res.ok) {
     throw new Error("Failed");
   }
