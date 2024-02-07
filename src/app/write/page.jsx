@@ -13,7 +13,6 @@ import {
   getDownloadURL,
 } from "firebase/storage";
 import { app } from "@/utils/firebase";
-// import ReactQuill from "react-quill";
 import toast from "react-hot-toast";
 import dynamic from "next/dynamic";
 
@@ -101,7 +100,10 @@ const WritePage = () => {
         type="text"
         placeholder="Title"
         className={Styles.input}
-        onChange={(e) => setTitle(e.target.value)}
+        onChange={(e) => {
+          setTitle(e.target.value);
+          e.preventDefault();
+        }}
       />
       <select
         className={Styles.select}
