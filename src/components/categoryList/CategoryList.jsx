@@ -17,6 +17,7 @@ const getData = async () => {
 
 const CategoryList = async () => {
   const data = await getData();
+  console.log("got data");
   console.log(data);
 
   return (
