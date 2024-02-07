@@ -15,12 +15,12 @@ import {
 import { app } from "@/utils/firebase";
 import toast from "react-hot-toast";
 import dynamic from "next/dynamic";
-import ReactQuill from "react-quill";
+//import ReactQuill from "react-quill";
 
 const WritePage = () => {
   const { status } = useSession();
   const router = useRouter();
-  //const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+  const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
   const [open, setOpen] = useState(false);
   const [file, setFile] = useState(null);
