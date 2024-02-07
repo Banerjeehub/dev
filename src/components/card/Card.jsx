@@ -3,6 +3,7 @@ import Styles from "./card.module.css";
 import Link from "next/link";
 
 const Card = ({ item, key }) => {
+  const URL = "/post/";
   return (
     <div className={Styles.container} key={key}>
       {item.img && (
@@ -17,14 +18,14 @@ const Card = ({ item, key }) => {
           </span>
           <span className={Styles.category}>{item.catSlug}</span>
         </div>
-        <Link href={`/post/${encodeURIComponent(item.slug)}`}>
+        <Link href={`${URL}${item.slug}`}>
           <h1>{item.title}</h1>
         </Link>
         <div
           className={Styles.desc}
           dangerouslySetInnerHTML={{ __html: item?.desc.substring(0, 60) }}
         />
-        <Link href={`/post/${item.slug}`} className={Styles.link}>
+        <Link href={`${URL}${item.slug}`} className={Styles.link}>
           Read More
         </Link>
       </div>
