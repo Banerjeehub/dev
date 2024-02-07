@@ -77,7 +77,7 @@ const WritePage = () => {
     return `${timestamp}-${slug}`;
   };
   const handleSubmit = async () => {
-    const res = await fetch("/api/post", {
+    const res = await fetch("/api/posts", {
       method: "POST",
       body: JSON.stringify({
         title,
@@ -91,7 +91,7 @@ const WritePage = () => {
     if (res.status === 200) {
       const data = await res.json();
       console.log(data);
-      router.push(`/post/${data.slug}`);
+      router.push(`/posts/${data.slug}`);
     }
   };
 
