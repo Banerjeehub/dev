@@ -3,7 +3,7 @@ import Styles from "./card.module.css";
 import Link from "next/link";
 
 const Card = ({ item, key }) => {
-  const URL = "/posts/";
+  const URL = "/api/posts/";
   return (
     <div className={Styles.container} key={key}>
       {item.img && (
