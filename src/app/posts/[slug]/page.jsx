@@ -4,14 +4,10 @@ import Image from "next/image";
 import Comments from "@/components/comments/Comments";
 import moment from "moment";
 
-const getData = async (slug) => {
-  const res = await fetch(
-    `https://tdev-tau-vert.vercel.app/api/posts/${slug}`,
-    {
-      cache: "no-store",
-    }
-  );
-
+const getData = async () => {
+  const res = await fetch("https://dev-tau-vert.vercel.app/api/categories", {
+    cache: "no-store",
+  });
   if (!res.ok) {
     throw new Error("Failed");
   }
