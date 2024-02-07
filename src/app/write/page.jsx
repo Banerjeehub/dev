@@ -16,11 +16,11 @@ import { app } from "@/utils/firebase";
 import toast from "react-hot-toast";
 import dynamic from "next/dynamic";
 //import ReactQuill from "react-quill";
+const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 const WritePage = () => {
   const { status } = useSession();
   const router = useRouter();
-  const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
   const [open, setOpen] = useState(false);
   const [file, setFile] = useState(null);
@@ -103,14 +103,14 @@ const WritePage = () => {
         className={Styles.input}
         onChange={(e) => {
           setTitle(e.target.value);
-          e.preventDefault();
+          //e.preventDefault();
         }}
       />
       <select
         className={Styles.select}
         onChange={(e) => {
           setCatSlug(e.target.value);
-          e.preventDefault();
+          //e.preventDefault();
         }}
       >
         <option value="news">news</option>
@@ -151,9 +151,8 @@ const WritePage = () => {
           className={Styles.textArea}
           theme="bubble"
           value={value}
-          onChange={(e) => {
-            setValue;
-            e.preventDefault();
+          onChange={(content, delta, source, editor) => {
+            setValue(content);
           }}
           placeholder="Tell your story..."
         />
