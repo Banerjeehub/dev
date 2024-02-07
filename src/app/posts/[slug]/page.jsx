@@ -20,6 +20,7 @@ const getData = async (slug) => {
 };
 
 const SinglePage = async ({ params }) => {
+  console.log("i am here");
   const { slug } = params;
 
   const data = await getData(slug);
