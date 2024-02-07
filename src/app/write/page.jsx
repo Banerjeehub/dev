@@ -77,7 +77,7 @@ const WritePage = () => {
     return `${timestamp}-${slug}`;
   };
   const handleSubmit = async () => {
-    const res = await fetch("/api/posts", {
+    const res = await fetch("/api/post", {
       method: "POST",
       body: JSON.stringify({
         title,
