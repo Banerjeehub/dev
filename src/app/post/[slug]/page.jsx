@@ -5,7 +5,7 @@ import Comments from "@/components/comments/Comments";
 import moment from "moment";
 
 const getData = async (slug) => {
-  const res = await fetch(`http://tdev-tau-vert.vercel.app/api/post/${slug}`, {
+  const res = await fetch(`https://tdev-tau-vert.vercel.app/api/post/${slug}`, {
     cache: "no-store",
   });
 
