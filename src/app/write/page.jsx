@@ -71,13 +71,13 @@ const WritePage = () => {
       .toLowerCase()
       .trim()
       .replace(/[^\w\s-]/g, "")
-      .replace(/[\s_-]+/g, "-")
+      .replace(/[\s_-]+/g, "")
       .replace(/^-+|-+$/g, "");
 
     return `${timestamp}-${slug}`;
   };
   const handleSubmit = async () => {
-    const res = await fetch("/api/post", {
+    const res = await fetch("/api/posts", {
       method: "POST",
       body: JSON.stringify({
         title,
