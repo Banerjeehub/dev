@@ -19,7 +19,7 @@ const getData = async (slug) => {
   return res.json();
 };
 
-const SinglePage = async ({ params }) => {
+const Page = async ({ params }) => {
   console.log("i am here");
   const { slug } = params;
 
@@ -69,4 +69,4 @@ const SinglePage = async ({ params }) => {
   );
 };
 
-export default SinglePage;
+export default Page;
