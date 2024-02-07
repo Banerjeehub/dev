@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&display=swap");
+
+.container {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+}
+.social {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+}
+.gitImage {
+  border-radius: 50%;
+}
+.logo {
+  flex: 1;
+  text-align: center;
+  font-size: 45px;
+  font-weight: 700;
+  font-family: "Ephesis", cursive;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  font-size: 20px;
+}
+@media screen and (max-width: 1280px) {
+  .logo {
+    font-size: 32px;
+  }
+  .links {
+    font-size: 18px;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .logo {
+    text-align: left;
+  }
+
+  .social {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .link {
+    display: none;
+  }
+  .links {
+    justify-content: flex-end;
+  }
+}
