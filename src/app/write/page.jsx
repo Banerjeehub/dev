@@ -139,12 +139,6 @@ const WritePage = () => {
                 <Image src="/imgU.png" alt="" width={16} height={16} />
               </label>
             </button>
-            <button className={Styles.addButton}>
-              <Image src="/external.png" alt="" width={16} height={16} />
-            </button>
-            <button className={Styles.addButton}>
-              <Image src="/video.png" alt="" width={16} height={16} />
-            </button>
           </div>
         )}
         <ReactQuill
